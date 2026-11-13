@@ -32,6 +32,13 @@ Computer Engineer (**B.Sc.** completed) and **M.Sc. Candidate in Cybersecurity**
 | **[ot-ics-tinyml-ai-soc](https://github.com/giusepperuggiero-sec/ot-ics-tinyml-ai-soc)** | Software Security | 4-shield OT/ICS gateway on **Arduino Portenta H7** (`MQTT` anti-DoS rate limit, sanitization, physics bounds, Edge Impulse `TinyML`), **STRIDE** & **SAST** audited (`0` C++ issues via Flawfinder/Cppcheck), feeding a local **Ollama (`Qwen 2.5`)** SOC bound to **MITRE ATT&CK ICS (v19)** with prompt-injection defenses. | [Code](https://github.com/giusepperuggiero-sec/ot-ics-tinyml-ai-soc) &middot; [Case Study](https://giusepperuggiero-sec.github.io/#ot-ics-tinyml) |
 | **[iomt-xai-intrusion-detection](https://github.com/giusepperuggiero-sec/iomt-xai-intrusion-detection)** | Data Analysis & Cybersecurity | Early privacy-preserving IoMT biflow classification (`CICIoMT2024`, `13` classes, `181,366` test flows, `T=10` packets / `6` header fields). Benchmarked `Lopez17CNN` (`84.76%` Macro-F1, `1.03 ms` CPU) vs. `MedDefenderTransformer` (`353K` params, `55%` lighter) with formal **GradientSHAP** vs. **Attention** causal audit (`MoRF/LeRF`) and `10/10` unit tests. | [Code](https://github.com/giusepperuggiero-sec/iomt-xai-intrusion-detection) &middot; [Case Study](https://giusepperuggiero-sec.github.io/#iomt-xai) |
 
+#### Additional Systems & AI Engineering
+
+| Repository | Domain | Architecture & Verified Highlights | Links |
+| :--- | :--- | :--- | :--- |
+| **[sdn-qos-network-slicing](https://github.com/giusepperuggiero-sec/sdn-qos-network-slicing)** | Network & Cloud Infrastructures | OpenFlow 1.3 SDN testbed over dual-slice Mininet diamond topology (`10 Mbps` priority vs. `1 Mbps` best-effort) implementing Topology Slicing (`66%` drop isolation), Service QoS Slicing (`9.35 Mbps`, `0%` UDP `:9999` loss; `958 Kbps` TCP `:80`), statistical `D-ITG` steering, loop/race fixes, and thread-safe Prometheus `:8000/metrics` (`7/7` unit tests). | [Code](https://github.com/giusepperuggiero-sec/sdn-qos-network-slicing) &middot; [Case Study](https://giusepperuggiero-sec.github.io/#sdn-slicing) |
+| **[legal-comparative-rag-agents](https://github.com/giusepperuggiero-sec/legal-comparative-rag-agents)** | Text Mining | Comparative European civil law RAG (`1,472` JSON docs across Italy, Slovenia, Estonia; `FAISS Flat L2`, `Qwen2.5-7B`) benchmarking Single-Agent ReAct (`0.9013` Faithfulness, `0.6856` mean) vs. Multi-Agent Supervisor (`0.6707` Answer Relevancy), hardened with ordered PII redaction, XML anti-prompt-injection fencing, FastAPI/Streamlit UI, and `8/8` pytest checks. | [Code](https://github.com/giusepperuggiero-sec/legal-comparative-rag-agents) &middot; [Case Study](https://giusepperuggiero-sec.github.io/#legal-rag) |
+
 ---
 
 ### Technical Toolbox
@@ -40,9 +47,9 @@ Computer Engineer (**B.Sc.** completed) and **M.Sc. Candidate in Cybersecurity**
 | :--- | :--- |
 | **Blue Team, SIEM & Hunting** | `Wazuh (SIEM / HIDS / FIM)` &middot; `Snort (NIDS)` &middot; `Sysmon` &middot; `Sigma` &middot; `Zircolite` &middot; `YARA / yarGen` &middot; `MITRE ATT&CK (Enterprise & ICS, Navigator)` &middot; `Pentbox` &middot; `Wireshark` &middot; `FakeNet` &middot; `VirusTotal` &middot; `STRIDE` |
 | **AppSec, Offensive & Malware** | `CodeQL (SAST)` &middot; `AFL` &middot; `AddressSanitizer` &middot; `Valgrind` &middot; `Cppcheck` &middot; `Flawfinder` &middot; `Bandit` &middot; `GDB / pwndbg` &middot; `pwntools` &middot; `Nmap` &middot; `Metasploit / msfvenom` &middot; `John the Ripper` &middot; `IDA` &middot; `Capa` &middot; `PEiD` &middot; `Process Explorer / Monitor` &middot; `LOLBins` &middot; `OWASP Top 10` &middot; `PyRIT` |
-| **Systems, Network & Embedded** | `Linux (Ubuntu, Kali)` &middot; `Windows (Event Viewer, Registry)` &middot; `iptables (NAT)` &middot; `Docker` &middot; `TCP/IP` &middot; `MQTT` &middot; `Arduino Portenta H7 (ARM Cortex-M7)` |
+| **Systems, Network & Embedded** | `Linux (Ubuntu, Kali)` &middot; `Windows (Event Viewer, Registry)` &middot; `iptables (NAT)` &middot; `Docker` &middot; `TCP/IP` &middot; `Mininet / Open vSwitch` &middot; `Ryu (OpenFlow 1.3)` &middot; `Prometheus & Grafana` &middot; `MQTT` &middot; `Arduino Portenta H7 (ARM Cortex-M7)` |
 | **Languages & Scripting** | `Python` &middot; `C / C++ (Embedded)` &middot; `Java` &middot; `SQL` &middot; `Bash` &middot; `PowerShell` &middot; `Assembly` &middot; `VHDL` &middot; `SystemVerilog` |
-| **AI, Data & Productivity** | `PyTorch` &middot; `Scikit-learn` &middot; `Pandas` &middot; `SHAP` &middot; `LIME` &middot; `Captum` &middot; `TinyML (Edge Impulse)` &middot; `Ollama` &middot; `Git` &middot; `LaTeX` &middot; `Argon ERP` |
+| **AI, Data & Productivity** | `PyTorch` &middot; `Scikit-learn` &middot; `Pandas` &middot; `SHAP` &middot; `LIME` &middot; `Captum` &middot; `LangChain` &middot; `FAISS` &middot; `RAGAS` &middot; `TinyML (Edge Impulse)` &middot; `Ollama` &middot; `FastAPI` &middot; `Streamlit` &middot; `Git` &middot; `LaTeX` &middot; `Argon ERP` |
 
 ---
 
